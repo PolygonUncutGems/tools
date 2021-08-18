@@ -8,6 +8,13 @@
 	<meta charset="UTF-8">
 	<meta name="description" content="The central hub for all quality yield farms and DeFi projects on Polygon network.">
 	<style>
+	  * {box-sizing: border-box;}
+    body {font-family: Verdana, sans-serif;}
+    .mySlides {display: none;}
+    img {vertical-align: middle;}
+
+    /* Slideshow container */
+    .slideshow-container {max-width: 1000px;position: relative;margin: auto;}
 		body {background-color:#272727;}
 		h3 {color:#ddd; font-family:monospace; font-size: 120%;}
 		p {color:#ddd; font-family:monospace;}
@@ -24,9 +31,21 @@
 
 <body style="background-color:#272727;">
 
-<div class='banner'>
-    <a href="https://hermesdefi.io?ref=97Eda3C9f1e4c7eF743b552Ab687Aa49FCa804c0"><img src='hermesdefibanner.jpg' style='max-width: 1000px'/></a>
+<div class="slideshow-container">
+
+<div class="mySlides">
+  <a href="https://hermesdefi.io?ref=97Eda3C9f1e4c7eF743b552Ab687Aa49FCa804c0"><img src='hermesdefibanner.jpg' style="width:100%"></a>
+</div>
+
+<div class="mySlides">
+  <a href="https://hermesdefi.io?ref=97Eda3C9f1e4c7eF743b552Ab687Aa49FCa804c0"><img src='hermesdefibanner.jpg' style="width:100%"></a>
+</div>
+
 </div>	
+
+<!--<div class='banner'>
+    <a href="https://hermesdefi.io?ref=97Eda3C9f1e4c7eF743b552Ab687Aa49FCa804c0"><img src='hermesdefibanner.jpg' style='max-width: 1000px'/></a>
+</div>-->	
 
 <br>
 
@@ -623,6 +642,28 @@
 
 <p>*None of these are financial advice, please always do your own research and invest with caution.</p>
 <p><strong>Visitor Count: </strong><a href='https://www.stat-counter.org/'>stat-counter.org</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=b2339ce6bf0b56e15a7519fe77de4add02911aa5'></script><script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/855939/t/5"></script></p>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 10000); // Change image every 10 seconds
+}
+</script>
 
 </body>
 </html>
